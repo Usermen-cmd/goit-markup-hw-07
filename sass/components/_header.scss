@@ -1,0 +1,80 @@
+.header {
+  border-bottom: 1px solid #ececec;
+}
+.logo {
+  margin-right: 93px;
+
+  font-family: $secondaryFont;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+  color: $generalAccentColor;
+  .logo-dark {
+    color: #000000;
+  }
+}
+.navigation-list {
+  display: flex;
+}
+.navigation-list-item {
+  margin-right: 50px;
+}
+.navigation-list-link {
+  padding: 32px 0;
+
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: $otherTextColor;
+  transition: all $transSettings;
+  &:hover,
+  &:focus {
+    color: $generalAccentColor;
+  }
+}
+.addres {
+  margin-left: auto;
+}
+.addres-list {
+  display: flex;
+}
+.addres-list-item {
+  margin-left: 30px;
+}
+.addres-list-link {
+  display: flex;
+  align-items: center;
+
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: $primeryTextColor;
+
+  transition: all $transSettings;
+  &:hover,
+  &:focus {
+    color: $generalAccentColor;
+  }
+}
+.addres-icon {
+  margin-right: 10px;
+  fill: currentColor;
+}
+.navigation-list-item.current a {
+  position: relative;
+  color: $generalAccentColor;
+}
+.navigation-list-item.current a::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background-color: $generalAccentColor;
+  bottom: -1px;
+  left: 0;
+}

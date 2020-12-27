@@ -1,0 +1,41 @@
+.hero {
+  background-color: $darkBgColor;
+  padding: 200px 0;
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../img/hero.jpg);
+  background-repeat: repeat;
+  background-position: center;
+  background-size: cover;
+  .container {
+    flex-direction: column;
+  }
+}
+
+.hero-header {
+  margin-bottom: 30px;
+
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+
+  color: #ffffff;
+}
+.hero-button {
+  padding: 10px 32px;
+
+  @extend %button;
+
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+  transition: all $transSettings;
+  &:hover,
+  &:focus {
+    background: $buttonAccentColor;
+  }
+}

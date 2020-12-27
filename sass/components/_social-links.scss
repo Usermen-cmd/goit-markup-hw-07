@@ -1,0 +1,40 @@
+.social-list,
+.footer-social-list {
+  display: flex;
+  justify-content: center;
+  :not(:last-child) {
+    margin-right: 10px;
+  }
+}
+.footer-social-list {
+  .social-item {
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  .social-icon {
+    fill: #ffffff;
+  }
+}
+.social-item {
+  & a:hover,
+  & a:focus {
+    background-color: $generalAccentColor;
+  }
+  & a:hover .social-icon,
+  & a:focus .social-icon {
+    fill: #ffffff;
+  }
+}
+.social-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  transition: all $transSettings;
+}
+.social-icon {
+  fill: $iconColor;
+  transition: all $transSettings;
+}

@@ -1,0 +1,38 @@
+.skills {
+  padding: 94px 0;
+}
+.skills-list {
+  display: flex;
+}
+.skills-item:not(:last-child) {
+  margin-right: 30px;
+}
+.skills-icon-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 25px 0;
+  margin-bottom: 30px;
+
+  background-color: $lightBgColor;
+}
+.skills-title {
+  margin-bottom: 10px;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: $titleTextColor;
+}
+.skills-text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+
+  color: $primeryTextColor;
+}

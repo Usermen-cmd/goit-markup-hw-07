@@ -1,0 +1,39 @@
+.clients {
+  padding: 94px 0;
+  .container {
+    display: block;
+  }
+}
+.clients-title {
+  margin-bottom: 50px;
+  @extend %title;
+}
+.clients-list {
+  display: flex;
+  justify-content: space-between;
+}
+.clients-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 170px;
+  height: 90px;
+
+  border: 1px solid $iconColor;
+  box-sizing: border-box;
+  border-radius: 4px;
+  transition: all $transSettings;
+  &:hover,
+  &:focus {
+    border-color: $generalAccentColor;
+  }
+  &:hover .clients-icon,
+  &:focus .clients-icon {
+    fill: $generalAccentColor;
+  }
+}
+.clients-icon {
+  fill: $iconColor;
+  transition: all $transSettings;
+}

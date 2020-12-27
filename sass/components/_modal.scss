@@ -1,0 +1,180 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  opacity: 1;
+  transition: all $transSettings;
+}
+.is-hidden {
+  pointer-events: none;
+  visibility: hidden;
+}
+.backdrop.is-hidden {
+  opacity: 0;
+}
+.backdrop .modal {
+  position: absolute;
+  width: 528px;
+  padding: 40px;
+  background-color: #ffffff;
+  top: 50%;
+  left: 50%;
+  opacity: 1;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform $transSettings, opacity $transSettings;
+}
+.backdrop.is-hidden .modal {
+  transition: transform $transSettings, opacity $transSettings;
+  transform: translate(-50%, -50%) scale(1.5);
+}
+.modal .modal-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  border: none;
+  outline: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  transition: fill $transSettings;
+}
+.modal .modal-btn:hover {
+  fill: $buttonGeneralColor;
+}
+/* form in modal */
+.modal-title {
+  display: block;
+  font-family: $primeryFont;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: $titleTextColor;
+  margin-bottom: 12px;
+}
+.form-wrapper {
+  position: relative;
+  margin-bottom: 10px;
+}
+.form-label {
+  display: block;
+  margin-bottom: 4px;
+  font-family: $primeryFont;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.166;
+  letter-spacing: 0.01em;
+  color: $primeryTextColor;
+}
+.form-input {
+  display: block;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  box-sizing: border-box;
+  border-radius: 4px;
+  width: 100%;
+  min-height: 40px;
+  padding: 12px 42px;
+  transition: border $transSettings;
+}
+.form-input:focus {
+  outline: none;
+  border: 1px solid $generalAccentColor;
+}
+.form-input.comment {
+  padding: 16px;
+  resize: none;
+  max-height: 120px;
+}
+.form-input.comment::placeholder {
+  font-family: $primeryFont;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
+}
+.form-icon {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+  width: 18px;
+  height: 18px;
+  transition: fill $transSettings;
+}
+.form-input:focus ~ .form-icon,
+.form-input:hover ~ .form-icon,
+.form-icon:hover {
+  fill: $generalAccentColor;
+}
+.form-wrapper-check-box {
+  position: relative;
+  max-width: 425px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: flex-end;
+}
+.check-hidden {
+  appearance: none;
+}
+.policy-link {
+  display: inline;
+  color: $generalAccentColor;
+  text-decoration: underline;
+}
+.check-box-label {
+  font-family: $primeryFont;
+  font-size: 14px;
+  line-height: 1.71;
+  color: $primeryTextColor;
+  letter-spacing: 0.03em;
+}
+.check-box {
+  position: absolute;
+  width: 16px;
+  height: 15px;
+  background-color: #ffffff;
+  border: 2px solid #000000;
+  border-radius: 2px;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: background-color $transSettings, border $transSettings 100ms;
+}
+.check:checked ~ .check-box {
+  background: url(../icon/check.svg);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  border: 2px solid $generalAccentColor;
+  border-radius: 2px;
+  background-color: $generalAccentColor;
+}
+.form-btn {
+  @extend %button;
+  padding: 10px 55px;
+  margin: 0 auto;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  &:hover,
+  &:focus {
+    background: $buttonAccentColor;
+  }
+}

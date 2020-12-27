@@ -1,0 +1,40 @@
+.work {
+  padding-bottom: 94px;
+  .container {
+    display: block;
+  }
+}
+.work-title {
+  margin-bottom: 50px;
+  @extend %title;
+}
+.work-list {
+  display: flex;
+  justify-content: space-between;
+}
+.work-thumb {
+  position: relative;
+}
+.work-list-overlay {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+
+  padding: 27px 0;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: #ffffff;
+  background: rgba(47, 48, 58, 0.8);
+}
+.work-img {
+  display: block;
+
+  max-width: 100%;
+}
