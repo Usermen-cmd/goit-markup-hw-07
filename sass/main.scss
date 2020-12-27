@@ -1,5 +1,7 @@
 @import './utils/variable';
 @import './utils/base-styles';
+@import './utils/plaseholders';
+@import './utils/mixins';
 @import './components/header';
 @import './components/hero';
 @import './components/skills';
@@ -10,4 +12,3 @@
 @import './components/portfolio';
 @import './components/modal';
 @import './components/social-links';
-@import './components/plaseholders';

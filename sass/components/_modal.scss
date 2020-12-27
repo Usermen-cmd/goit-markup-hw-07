@@ -58,10 +58,12 @@
 /* form in modal */
 .modal-title {
   display: block;
+
   font-family: $primeryFont;
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 1.15;
+  @include font(700, 24px, 1.15);
+  // font-weight: 700;
+  // font-size: 20px;
+  // line-height: 1.15;
   text-align: center;
   letter-spacing: 0.03em;
   color: $titleTextColor;
@@ -74,11 +76,12 @@
 .form-label {
   display: block;
   margin-bottom: 4px;
+
   font-family: $primeryFont;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 1.166;
+  @include font(400, 12px, 1.166);
+  // font-weight: 400;
+  // font-size: 12px;
+  // line-height: 1.166;
   letter-spacing: 0.01em;
   color: $primeryTextColor;
 }
@@ -103,10 +106,10 @@
 }
 .form-input.comment::placeholder {
   font-family: $primeryFont;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.14;
+  @include font(400, 14px, 1.14);
+  // font-weight: 400;
+  // font-size: 14px;
+  // line-height: 1.14;
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
 }
@@ -142,8 +145,9 @@
 }
 .check-box-label {
   font-family: $primeryFont;
-  font-size: 14px;
-  line-height: 1.71;
+  @include font(400, 14px, 1.71);
+  // font-size: 14px;
+  // line-height: 1.71;
   color: $primeryTextColor;
   letter-spacing: 0.03em;
 }
